@@ -73,7 +73,7 @@ read.xlsx <- function(xlsxFile,
                       rows = NULL,
                       cols = NULL,
                       check.names = FALSE,
-                      sep.names = "."
+                      sep.names = ".",
                       namedRegion = NULL,
                       na.strings = "NA",
                       fillMergedCells = FALSE){
@@ -94,7 +94,7 @@ read.xlsx.default <- function(xlsxFile,
                               rows = NULL,
                               cols = NULL,
                               check.names = FALSE,
-                              sep.names = "."
+                              sep.names = ".",
                               namedRegion = NULL,
                               na.strings = "NA",
                               fillMergedCells = FALSE){
@@ -446,7 +446,7 @@ read.xlsx.default <- function(xlsxFile,
                      string_inds = string_refs,
                      is_date = isDate,
                      hasColNames = colNames,
-                     hasSepNames = sep.names
+                     hasSepNames = sep.names,
                      skipEmptyRows = skipEmptyRows,
                      skipEmptyCols = skipEmptyCols,
                      nRows = nRows,
@@ -501,7 +501,7 @@ readWorkbook <- function(xlsxFile,
                          rows = NULL,
                          cols = NULL,
                          check.names = FALSE,
-                         sep.names = "."
+                         sep.names = ".",
                          namedRegion = NULL,
                          na.strings = "NA",
                          fillMergedCells = FALSE){
@@ -517,7 +517,7 @@ readWorkbook <- function(xlsxFile,
             rows = rows,
             cols = cols,
             check.names = check.names,
-            sep.names = "."
+            sep.names = ".",
             namedRegion = namedRegion,
             na.strings = na.strings,
             fillMergedCells = fillMergedCells)
