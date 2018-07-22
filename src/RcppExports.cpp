@@ -263,6 +263,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< IntegerVector >::type string_inds(string_indsSEXP);
     Rcpp::traits::input_parameter< LogicalVector >::type is_date(is_dateSEXP);
     Rcpp::traits::input_parameter< bool >::type hasColNames(hasColNamesSEXP);
+    Rcpp::traits::input_parameter< char >::type hasSepNames(hasSepNamesSEXP);
     Rcpp::traits::input_parameter< bool >::type skipEmptyRows(skipEmptyRowsSEXP);
     Rcpp::traits::input_parameter< bool >::type skipEmptyCols(skipEmptyColsSEXP);
     Rcpp::traits::input_parameter< int >::type nRows(nRowsSEXP);
