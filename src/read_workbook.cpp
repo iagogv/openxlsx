@@ -423,6 +423,7 @@ SEXP read_workbook(IntegerVector cols_in,
                    IntegerVector string_inds,
                    LogicalVector is_date,
                    bool hasColNames,
+                   char hasSepNames,
                    bool skipEmptyRows,
                    bool skipEmptyCols,
                    int nRows,
@@ -485,6 +486,7 @@ SEXP read_workbook(IntegerVector cols_in,
   CharacterVector col_names(nCols);
   IntegerVector removeFlag;
   int pos = 0;
+  char sep_names = hasSepNames;
   
   // If we are told col_names exist take the first row and fill any gaps with X.i
   if(hasColNames){
@@ -520,7 +522,7 @@ SEXP read_workbook(IntegerVector cols_in,
     }
     
     // tidy up column names
-    col_names = clean_names(col_names);
+    col_names = clean_names(col_names,sep_names);
     
     //--------------------------------------------------------------------------------
     // Remove elements from rows, cols, v that have been used as headers
